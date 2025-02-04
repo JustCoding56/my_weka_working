@@ -1,0 +1,255 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     accident_data
+Instances:    500
+Attributes:   9
+              Accident_ID
+              Location
+              Time_of_Day
+              Weather
+              Road_Condition
+              Vehicle_Type
+              Injury_Severity
+              Accident_Hotspot
+              Vehicle_Involvement
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Vehicle_Type = Car
+|   Time_of_Day = Afternoon
+|   |   Location = Suburban: Minor Injury (8.0/4.0)
+|   |   Location = Rural
+|   |   |   Accident_Hotspot = Yes: Severe Injury (6.0/2.0)
+|   |   |   Accident_Hotspot = No: No Injury (3.0/1.0)
+|   |   Location = Urban
+|   |   |   Road_Condition = Icy: Fatal (2.0/1.0)
+|   |   |   Road_Condition = Wet: Severe Injury (2.0)
+|   |   |   Road_Condition = Dry: No Injury (3.0/2.0)
+|   Time_of_Day = Evening
+|   |   Location = Suburban
+|   |   |   Accident_Hotspot = Yes
+|   |   |   |   Road_Condition = Icy: Minor Injury (3.0)
+|   |   |   |   Road_Condition = Wet: No Injury (2.0)
+|   |   |   |   Road_Condition = Dry: Fatal (2.0/1.0)
+|   |   |   Accident_Hotspot = No: No Injury (2.0)
+|   |   Location = Rural: Fatal (11.0/5.0)
+|   |   Location = Urban
+|   |   |   Weather = Snowy: No Injury (0.0)
+|   |   |   Weather = Clear: Fatal (4.0/2.0)
+|   |   |   Weather = Foggy
+|   |   |   |   Vehicle_Involvement <= 3: Severe Injury (4.0/1.0)
+|   |   |   |   Vehicle_Involvement > 3: No Injury (4.0/2.0)
+|   |   |   Weather = Rainy: No Injury (0.0)
+|   Time_of_Day = Morning
+|   |   Weather = Snowy
+|   |   |   Vehicle_Involvement <= 3: No Injury (2.0)
+|   |   |   Vehicle_Involvement > 3: Fatal (3.0/1.0)
+|   |   Weather = Clear: No Injury (6.0/1.0)
+|   |   Weather = Foggy
+|   |   |   Road_Condition = Icy: Minor Injury (1.0)
+|   |   |   Road_Condition = Wet: Fatal (2.0)
+|   |   |   Road_Condition = Dry
+|   |   |   |   Accident_Hotspot = Yes: Severe Injury (2.0/1.0)
+|   |   |   |   Accident_Hotspot = No: No Injury (2.0)
+|   |   Weather = Rainy
+|   |   |   Location = Suburban: Fatal (2.0/1.0)
+|   |   |   Location = Rural: No Injury (0.0)
+|   |   |   Location = Urban: No Injury (4.0/2.0)
+|   Time_of_Day = Night
+|   |   Accident_Hotspot = Yes
+|   |   |   Vehicle_Involvement <= 3
+|   |   |   |   Vehicle_Involvement <= 2: Minor Injury (3.0)
+|   |   |   |   Vehicle_Involvement > 2: Fatal (3.0)
+|   |   |   Vehicle_Involvement > 3: Minor Injury (5.0/2.0)
+|   |   Accident_Hotspot = No: Severe Injury (7.0/4.0)
+Vehicle_Type = Bus
+|   Location = Suburban
+|   |   Weather = Snowy
+|   |   |   Road_Condition = Icy: Minor Injury (3.0/1.0)
+|   |   |   Road_Condition = Wet: No Injury (6.0/3.0)
+|   |   |   Road_Condition = Dry: Severe Injury (4.0/2.0)
+|   |   Weather = Clear: Fatal (10.0/4.0)
+|   |   Weather = Foggy
+|   |   |   Road_Condition = Icy: No Injury (2.0/1.0)
+|   |   |   Road_Condition = Wet: No Injury (4.0/1.0)
+|   |   |   Road_Condition = Dry: Severe Injury (2.0)
+|   |   Weather = Rainy
+|   |   |   Vehicle_Involvement <= 2: Fatal (2.0/1.0)
+|   |   |   Vehicle_Involvement > 2: No Injury (3.0/1.0)
+|   Location = Rural
+|   |   Weather = Snowy
+|   |   |   Road_Condition = Icy: Severe Injury (4.0/2.0)
+|   |   |   Road_Condition = Wet: No Injury (3.0/1.0)
+|   |   |   Road_Condition = Dry: Minor Injury (1.0)
+|   |   Weather = Clear
+|   |   |   Road_Condition = Icy: Minor Injury (3.0/1.0)
+|   |   |   Road_Condition = Wet
+|   |   |   |   Time_of_Day = Afternoon: Severe Injury (1.0)
+|   |   |   |   Time_of_Day = Evening: No Injury (2.0)
+|   |   |   |   Time_of_Day = Morning: Severe Injury (3.0/1.0)
+|   |   |   |   Time_of_Day = Night: Minor Injury (1.0)
+|   |   |   Road_Condition = Dry: Minor Injury (1.0)
+|   |   Weather = Foggy: Fatal (8.0/4.0)
+|   |   Weather = Rainy: Severe Injury (6.0/1.0)
+|   Location = Urban
+|   |   Weather = Snowy: Minor Injury (6.0/2.0)
+|   |   Weather = Clear
+|   |   |   Accident_Hotspot = Yes: Severe Injury (4.0/2.0)
+|   |   |   Accident_Hotspot = No: Fatal (5.0/2.0)
+|   |   Weather = Foggy
+|   |   |   Road_Condition = Icy: Minor Injury (6.0/2.0)
+|   |   |   Road_Condition = Wet: Severe Injury (2.0)
+|   |   |   Road_Condition = Dry: No Injury (1.0)
+|   |   Weather = Rainy
+|   |   |   Accident_Hotspot = Yes: Severe Injury (5.0/2.0)
+|   |   |   Accident_Hotspot = No: Fatal (4.0/1.0)
+Vehicle_Type = Truck
+|   Time_of_Day = Afternoon
+|   |   Weather = Snowy: Fatal (3.0/1.0)
+|   |   Weather = Clear
+|   |   |   Road_Condition = Icy: No Injury (6.0/3.0)
+|   |   |   Road_Condition = Wet: Fatal (5.0/2.0)
+|   |   |   Road_Condition = Dry: Fatal (2.0/1.0)
+|   |   Weather = Foggy
+|   |   |   Location = Suburban: Severe Injury (1.0)
+|   |   |   Location = Rural
+|   |   |   |   Vehicle_Involvement <= 4: Fatal (2.0)
+|   |   |   |   Vehicle_Involvement > 4: No Injury (3.0/1.0)
+|   |   |   Location = Urban: Minor Injury (3.0/1.0)
+|   |   Weather = Rainy: Severe Injury (11.0/6.0)
+|   Time_of_Day = Evening
+|   |   Road_Condition = Icy: Fatal (5.0/1.0)
+|   |   Road_Condition = Wet: Severe Injury (14.0/7.0)
+|   |   Road_Condition = Dry: Minor Injury (4.0/1.0)
+|   Time_of_Day = Morning
+|   |   Weather = Snowy: No Injury (5.0/2.0)
+|   |   Weather = Clear: Severe Injury (9.0/6.0)
+|   |   Weather = Foggy: No Injury (3.0/2.0)
+|   |   Weather = Rainy: No Injury (4.0/2.0)
+|   Time_of_Day = Night
+|   |   Road_Condition = Icy: Fatal (11.0/4.0)
+|   |   Road_Condition = Wet
+|   |   |   Vehicle_Involvement <= 3: No Injury (2.0)
+|   |   |   Vehicle_Involvement > 3
+|   |   |   |   Accident_Hotspot = Yes: No Injury (3.0/1.0)
+|   |   |   |   Accident_Hotspot = No: Severe Injury (3.0)
+|   |   Road_Condition = Dry
+|   |   |   Weather = Snowy: No Injury (0.0)
+|   |   |   Weather = Clear: No Injury (0.0)
+|   |   |   Weather = Foggy: Fatal (3.0/1.0)
+|   |   |   Weather = Rainy
+|   |   |   |   Location = Suburban: Severe Injury (2.0/1.0)
+|   |   |   |   Location = Rural: No Injury (0.0)
+|   |   |   |   Location = Urban: No Injury (2.0)
+Vehicle_Type = Bicycle
+|   Vehicle_Involvement <= 2
+|   |   Road_Condition = Icy
+|   |   |   Location = Suburban: Minor Injury (5.0/2.0)
+|   |   |   Location = Rural: Severe Injury (12.0/5.0)
+|   |   |   Location = Urban: Fatal (2.0/1.0)
+|   |   Road_Condition = Wet
+|   |   |   Time_of_Day = Afternoon: Severe Injury (2.0/1.0)
+|   |   |   Time_of_Day = Evening: No Injury (3.0/1.0)
+|   |   |   Time_of_Day = Morning: Minor Injury (6.0/3.0)
+|   |   |   Time_of_Day = Night
+|   |   |   |   Weather = Snowy: Fatal (2.0/1.0)
+|   |   |   |   Weather = Clear: Severe Injury (2.0)
+|   |   |   |   Weather = Foggy: Severe Injury (0.0)
+|   |   |   |   Weather = Rainy: Severe Injury (0.0)
+|   |   Road_Condition = Dry
+|   |   |   Vehicle_Involvement <= 1: Minor Injury (9.0/4.0)
+|   |   |   Vehicle_Involvement > 1: Severe Injury (2.0)
+|   Vehicle_Involvement > 2
+|   |   Vehicle_Involvement <= 3: Fatal (12.0/4.0)
+|   |   Vehicle_Involvement > 3
+|   |   |   Weather = Snowy
+|   |   |   |   Time_of_Day = Afternoon
+|   |   |   |   |   Road_Condition = Icy: No Injury (2.0/1.0)
+|   |   |   |   |   Road_Condition = Wet: Fatal (0.0)
+|   |   |   |   |   Road_Condition = Dry: Fatal (2.0)
+|   |   |   |   Time_of_Day = Evening: No Injury (2.0/1.0)
+|   |   |   |   Time_of_Day = Morning: Fatal (1.0)
+|   |   |   |   Time_of_Day = Night: Severe Injury (3.0)
+|   |   |   Weather = Clear
+|   |   |   |   Vehicle_Involvement <= 4: Fatal (2.0)
+|   |   |   |   Vehicle_Involvement > 4: Minor Injury (4.0/2.0)
+|   |   |   Weather = Foggy
+|   |   |   |   Vehicle_Involvement <= 4
+|   |   |   |   |   Location = Suburban: No Injury (3.0/1.0)
+|   |   |   |   |   Location = Rural: Severe Injury (2.0/1.0)
+|   |   |   |   |   Location = Urban: No Injury (0.0)
+|   |   |   |   Vehicle_Involvement > 4
+|   |   |   |   |   Location = Suburban: Minor Injury (2.0)
+|   |   |   |   |   Location = Rural: No Injury (2.0)
+|   |   |   |   |   Location = Urban: No Injury (0.0)
+|   |   |   Weather = Rainy: No Injury (7.0/4.0)
+Vehicle_Type = Motorcycle
+|   Accident_Hotspot = Yes
+|   |   Weather = Snowy
+|   |   |   Time_of_Day = Afternoon: Fatal (5.0/2.0)
+|   |   |   Time_of_Day = Evening: Severe Injury (2.0/1.0)
+|   |   |   Time_of_Day = Morning: Severe Injury (4.0/1.0)
+|   |   |   Time_of_Day = Night: Minor Injury (3.0/1.0)
+|   |   Weather = Clear
+|   |   |   Road_Condition = Icy: No Injury (4.0/2.0)
+|   |   |   Road_Condition = Wet: Minor Injury (3.0/1.0)
+|   |   |   Road_Condition = Dry
+|   |   |   |   Time_of_Day = Afternoon: Minor Injury (3.0/1.0)
+|   |   |   |   Time_of_Day = Evening: Fatal (3.0/1.0)
+|   |   |   |   Time_of_Day = Morning: Fatal (2.0)
+|   |   |   |   Time_of_Day = Night: Fatal (0.0)
+|   |   Weather = Foggy
+|   |   |   Time_of_Day = Afternoon: Minor Injury (2.0)
+|   |   |   Time_of_Day = Evening: Fatal (5.0/2.0)
+|   |   |   Time_of_Day = Morning: No Injury (2.0/1.0)
+|   |   |   Time_of_Day = Night: No Injury (1.0)
+|   |   Weather = Rainy: Fatal (7.0/2.0)
+|   Accident_Hotspot = No
+|   |   Vehicle_Involvement <= 2
+|   |   |   Weather = Snowy: No Injury (7.0/4.0)
+|   |   |   Weather = Clear: No Injury (6.0/3.0)
+|   |   |   Weather = Foggy: Fatal (4.0/1.0)
+|   |   |   Weather = Rainy: Minor Injury (6.0/3.0)
+|   |   Vehicle_Involvement > 2: Severe Injury (36.0/19.0)
+
+Number of Leaves  : 	132
+
+Size of the tree : 	197
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          98               19.6    %
+Incorrectly Classified Instances       402               80.4    %
+Kappa statistic                         -0.0716
+Mean absolute error                      0.3863
+Root mean squared error                  0.5139
+Relative absolute error                103.1775 %
+Root relative squared error            118.7572 %
+Total Number of Instances              500     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.198    0.290    0.163      0.198    0.179      -0.086   0.476     0.204     No Injury
+                 0.156    0.253    0.175      0.156    0.165      -0.100   0.480     0.247     Severe Injury
+                 0.276    0.281    0.264      0.276    0.270      -0.005   0.483     0.266     Fatal
+                 0.150    0.247    0.171      0.150    0.160      -0.102   0.456     0.223     Minor Injury
+Weighted Avg.    0.196    0.267    0.195      0.196    0.195      -0.072   0.474     0.236     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 22 32 30 27 |  a = No Injury
+ 39 20 38 31 |  b = Severe Injury
+ 34 29 37 34 |  c = Fatal
+ 40 33 35 19 |  d = Minor Injury
+
