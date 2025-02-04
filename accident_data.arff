@@ -1,0 +1,513 @@
+@relation accident_data
+
+@attribute Accident_ID {A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24,A25,A26,A27,A28,A29,A30,A31,A32,A33,A34,A35,A36,A37,A38,A39,A40,A41,A42,A43,A44,A45,A46,A47,A48,A49,A50,A51,A52,A53,A54,A55,A56,A57,A58,A59,A60,A61,A62,A63,A64,A65,A66,A67,A68,A69,A70,A71,A72,A73,A74,A75,A76,A77,A78,A79,A80,A81,A82,A83,A84,A85,A86,A87,A88,A89,A90,A91,A92,A93,A94,A95,A96,A97,A98,A99,A100,A101,A102,A103,A104,A105,A106,A107,A108,A109,A110,A111,A112,A113,A114,A115,A116,A117,A118,A119,A120,A121,A122,A123,A124,A125,A126,A127,A128,A129,A130,A131,A132,A133,A134,A135,A136,A137,A138,A139,A140,A141,A142,A143,A144,A145,A146,A147,A148,A149,A150,A151,A152,A153,A154,A155,A156,A157,A158,A159,A160,A161,A162,A163,A164,A165,A166,A167,A168,A169,A170,A171,A172,A173,A174,A175,A176,A177,A178,A179,A180,A181,A182,A183,A184,A185,A186,A187,A188,A189,A190,A191,A192,A193,A194,A195,A196,A197,A198,A199,A200,A201,A202,A203,A204,A205,A206,A207,A208,A209,A210,A211,A212,A213,A214,A215,A216,A217,A218,A219,A220,A221,A222,A223,A224,A225,A226,A227,A228,A229,A230,A231,A232,A233,A234,A235,A236,A237,A238,A239,A240,A241,A242,A243,A244,A245,A246,A247,A248,A249,A250,A251,A252,A253,A254,A255,A256,A257,A258,A259,A260,A261,A262,A263,A264,A265,A266,A267,A268,A269,A270,A271,A272,A273,A274,A275,A276,A277,A278,A279,A280,A281,A282,A283,A284,A285,A286,A287,A288,A289,A290,A291,A292,A293,A294,A295,A296,A297,A298,A299,A300,A301,A302,A303,A304,A305,A306,A307,A308,A309,A310,A311,A312,A313,A314,A315,A316,A317,A318,A319,A320,A321,A322,A323,A324,A325,A326,A327,A328,A329,A330,A331,A332,A333,A334,A335,A336,A337,A338,A339,A340,A341,A342,A343,A344,A345,A346,A347,A348,A349,A350,A351,A352,A353,A354,A355,A356,A357,A358,A359,A360,A361,A362,A363,A364,A365,A366,A367,A368,A369,A370,A371,A372,A373,A374,A375,A376,A377,A378,A379,A380,A381,A382,A383,A384,A385,A386,A387,A388,A389,A390,A391,A392,A393,A394,A395,A396,A397,A398,A399,A400,A401,A402,A403,A404,A405,A406,A407,A408,A409,A410,A411,A412,A413,A414,A415,A416,A417,A418,A419,A420,A421,A422,A423,A424,A425,A426,A427,A428,A429,A430,A431,A432,A433,A434,A435,A436,A437,A438,A439,A440,A441,A442,A443,A444,A445,A446,A447,A448,A449,A450,A451,A452,A453,A454,A455,A456,A457,A458,A459,A460,A461,A462,A463,A464,A465,A466,A467,A468,A469,A470,A471,A472,A473,A474,A475,A476,A477,A478,A479,A480,A481,A482,A483,A484,A485,A486,A487,A488,A489,A490,A491,A492,A493,A494,A495,A496,A497,A498,A499,A500}
+@attribute Location {Suburban,Rural,Urban}
+@attribute Time_of_Day {Afternoon,Evening,Morning,Night}
+@attribute Weather {Snowy,Clear,Foggy,Rainy}
+@attribute Road_Condition {Icy,Wet,Dry}
+@attribute Vehicle_Type {Car,Bus,Truck,Bicycle,Motorcycle}
+@attribute Injury_Severity {'No Injury','Severe Injury',Fatal,'Minor Injury'}
+@attribute Accident_Hotspot {Yes,No}
+@attribute Vehicle_Involvement numeric
+
+@data
+A1,Suburban,Afternoon,Snowy,Icy,Car,'No Injury',Yes,4
+A2,Rural,Evening,Clear,Wet,Bus,'No Injury',Yes,1
+A3,Suburban,Morning,Clear,Icy,Truck,'Severe Injury',Yes,5
+A4,Suburban,Evening,Snowy,Wet,Bus,Fatal,Yes,5
+A5,Rural,Afternoon,Foggy,Icy,Truck,Fatal,No,1
+A6,Rural,Night,Foggy,Icy,Bicycle,'No Injury',Yes,5
+A7,Urban,Night,Snowy,Wet,Bicycle,'Severe Injury',No,5
+A8,Rural,Night,Foggy,Wet,Truck,'No Injury',No,2
+A9,Suburban,Afternoon,Rainy,Wet,Bus,'Minor Injury',No,2
+A10,Rural,Night,Clear,Wet,Motorcycle,'Minor Injury',Yes,1
+A11,Rural,Morning,Snowy,Icy,Motorcycle,Fatal,No,3
+A12,Urban,Night,Foggy,Dry,Car,'Minor Injury',Yes,5
+A13,Rural,Evening,Rainy,Wet,Car,Fatal,Yes,5
+A14,Urban,Afternoon,Snowy,Wet,Car,'Severe Injury',Yes,2
+A15,Suburban,Night,Clear,Wet,Bicycle,'Severe Injury',No,2
+A16,Rural,Afternoon,Rainy,Wet,Motorcycle,'No Injury',Yes,1
+A17,Suburban,Evening,Snowy,Dry,Bus,'Minor Injury',No,1
+A18,Rural,Night,Clear,Wet,Bus,'Minor Injury',Yes,3
+A19,Rural,Evening,Foggy,Icy,Bicycle,'No Injury',Yes,1
+A20,Urban,Evening,Clear,Wet,Truck,'Severe Injury',Yes,4
+A21,Rural,Evening,Foggy,Wet,Bus,'Severe Injury',No,1
+A22,Suburban,Afternoon,Clear,Wet,Truck,Fatal,Yes,2
+A23,Rural,Evening,Snowy,Wet,Truck,'Minor Injury',Yes,3
+A24,Urban,Evening,Clear,Dry,Bus,'No Injury',No,3
+A25,Suburban,Afternoon,Clear,Wet,Bus,Fatal,Yes,1
+A26,Urban,Morning,Clear,Dry,Motorcycle,'Minor Injury',No,5
+A27,Rural,Evening,Foggy,Icy,Bicycle,'Minor Injury',Yes,1
+A28,Urban,Night,Rainy,Icy,Car,'Minor Injury',No,1
+A29,Suburban,Morning,Foggy,Wet,Bus,'No Injury',No,2
+A30,Rural,Night,Snowy,Wet,Bus,'Severe Injury',Yes,3
+A31,Suburban,Evening,Foggy,Wet,Car,'No Injury',Yes,2
+A32,Suburban,Night,Rainy,Icy,Truck,'Severe Injury',Yes,1
+A33,Urban,Morning,Rainy,Dry,Bicycle,'No Injury',Yes,4
+A34,Suburban,Night,Foggy,Dry,Truck,Fatal,No,5
+A35,Suburban,Evening,Clear,Icy,Truck,Fatal,No,4
+A36,Rural,Morning,Clear,Wet,Truck,'Severe Injury',No,1
+A37,Rural,Morning,Clear,Dry,Bicycle,'Minor Injury',Yes,5
+A38,Rural,Night,Rainy,Icy,Truck,'Severe Injury',Yes,5
+A39,Rural,Afternoon,Foggy,Wet,Truck,'No Injury',No,5
+A40,Rural,Morning,Foggy,Dry,Truck,Fatal,No,1
+A41,Rural,Afternoon,Clear,Icy,Truck,'Minor Injury',No,1
+A42,Urban,Afternoon,Snowy,Wet,Truck,Fatal,Yes,2
+A43,Urban,Afternoon,Snowy,Dry,Motorcycle,'No Injury',Yes,2
+A44,Urban,Evening,Foggy,Dry,Truck,'Minor Injury',No,1
+A45,Rural,Evening,Foggy,Dry,Bus,'No Injury',Yes,5
+A46,Rural,Afternoon,Rainy,Wet,Bicycle,'No Injury',No,4
+A47,Suburban,Afternoon,Foggy,Icy,Bicycle,'Minor Injury',Yes,3
+A48,Suburban,Morning,Clear,Dry,Bus,Fatal,Yes,3
+A49,Rural,Afternoon,Clear,Icy,Bicycle,'Severe Injury',Yes,2
+A50,Suburban,Morning,Snowy,Dry,Motorcycle,'Severe Injury',Yes,5
+A51,Suburban,Morning,Foggy,Dry,Car,'No Injury',No,3
+A52,Urban,Evening,Clear,Dry,Truck,Fatal,Yes,4
+A53,Suburban,Morning,Clear,Icy,Bus,'Severe Injury',No,1
+A54,Suburban,Evening,Rainy,Wet,Motorcycle,'Minor Injury',No,2
+A55,Suburban,Morning,Snowy,Wet,Car,'No Injury',No,2
+A56,Rural,Morning,Snowy,Dry,Truck,Fatal,Yes,3
+A57,Rural,Night,Rainy,Dry,Motorcycle,Fatal,Yes,5
+A58,Suburban,Morning,Foggy,Wet,Bus,Fatal,No,1
+A59,Urban,Afternoon,Snowy,Dry,Motorcycle,Fatal,Yes,4
+A60,Urban,Morning,Clear,Wet,Truck,'Severe Injury',Yes,3
+A61,Suburban,Night,Clear,Icy,Bicycle,'No Injury',Yes,1
+A62,Rural,Afternoon,Foggy,Icy,Motorcycle,'Minor Injury',Yes,4
+A63,Rural,Evening,Snowy,Wet,Car,'No Injury',No,5
+A64,Urban,Morning,Clear,Dry,Truck,Fatal,Yes,4
+A65,Rural,Night,Snowy,Wet,Bus,'No Injury',No,1
+A66,Rural,Night,Snowy,Icy,Truck,Fatal,No,1
+A67,Suburban,Afternoon,Snowy,Wet,Bus,'No Injury',Yes,2
+A68,Urban,Morning,Clear,Dry,Bicycle,'No Injury',No,5
+A69,Rural,Afternoon,Foggy,Wet,Motorcycle,'Severe Injury',No,4
+A70,Suburban,Afternoon,Foggy,Dry,Car,'Severe Injury',No,1
+A71,Urban,Afternoon,Rainy,Wet,Motorcycle,Fatal,No,1
+A72,Urban,Afternoon,Rainy,Icy,Bus,'Severe Injury',Yes,4
+A73,Suburban,Afternoon,Clear,Icy,Bus,Fatal,No,2
+A74,Suburban,Evening,Clear,Dry,Bus,'No Injury',No,4
+A75,Urban,Afternoon,Clear,Dry,Bicycle,'Minor Injury',Yes,1
+A76,Rural,Morning,Clear,Icy,Bus,'Minor Injury',No,1
+A77,Rural,Night,Rainy,Icy,Car,'Minor Injury',Yes,2
+A78,Urban,Evening,Clear,Icy,Motorcycle,'Severe Injury',Yes,1
+A79,Suburban,Evening,Snowy,Icy,Truck,Fatal,Yes,1
+A80,Urban,Morning,Clear,Wet,Motorcycle,'Minor Injury',Yes,5
+A81,Rural,Afternoon,Clear,Dry,Car,Fatal,Yes,4
+A82,Rural,Morning,Clear,Wet,Bus,'Severe Injury',No,3
+A83,Suburban,Afternoon,Rainy,Dry,Truck,Fatal,No,1
+A84,Suburban,Evening,Rainy,Icy,Car,'Minor Injury',Yes,3
+A85,Urban,Evening,Clear,Dry,Bus,Fatal,No,1
+A86,Urban,Night,Foggy,Icy,Car,Fatal,Yes,3
+A87,Urban,Morning,Clear,Icy,Motorcycle,'Severe Injury',No,3
+A88,Suburban,Night,Rainy,Icy,Car,'Severe Injury',Yes,4
+A89,Rural,Morning,Snowy,Wet,Bicycle,'No Injury',No,2
+A90,Suburban,Afternoon,Snowy,Icy,Bicycle,'Minor Injury',No,2
+A91,Suburban,Afternoon,Clear,Wet,Motorcycle,Fatal,No,5
+A92,Suburban,Morning,Rainy,Icy,Car,'Minor Injury',No,3
+A93,Rural,Morning,Snowy,Wet,Truck,'Severe Injury',Yes,1
+A94,Suburban,Afternoon,Rainy,Dry,Bus,'No Injury',No,3
+A95,Suburban,Evening,Snowy,Wet,Bus,'Severe Injury',No,2
+A96,Urban,Evening,Clear,Icy,Bus,'Minor Injury',No,4
+A97,Urban,Evening,Foggy,Wet,Bus,'Severe Injury',No,4
+A98,Urban,Morning,Foggy,Icy,Bus,'Severe Injury',No,3
+A99,Rural,Morning,Snowy,Dry,Motorcycle,'Severe Injury',Yes,2
+A100,Rural,Night,Clear,Icy,Motorcycle,'No Injury',Yes,3
+A101,Urban,Afternoon,Foggy,Wet,Motorcycle,'Minor Injury',Yes,2
+A102,Urban,Night,Clear,Wet,Motorcycle,Fatal,No,3
+A103,Suburban,Evening,Foggy,Icy,Car,'No Injury',No,4
+A104,Urban,Evening,Foggy,Wet,Car,'Severe Injury',No,3
+A105,Rural,Evening,Foggy,Wet,Truck,'Severe Injury',Yes,3
+A106,Suburban,Night,Snowy,Wet,Bicycle,Fatal,No,2
+A107,Urban,Evening,Foggy,Icy,Car,'No Injury',No,2
+A108,Urban,Morning,Snowy,Icy,Bus,'Minor Injury',No,5
+A109,Rural,Afternoon,Rainy,Icy,Truck,'Minor Injury',No,3
+A110,Suburban,Evening,Clear,Icy,Bicycle,Fatal,No,3
+A111,Suburban,Morning,Snowy,Icy,Bus,'Minor Injury',Yes,2
+A112,Suburban,Afternoon,Snowy,Dry,Motorcycle,'Minor Injury',Yes,5
+A113,Urban,Afternoon,Snowy,Wet,Motorcycle,'Severe Injury',No,5
+A114,Suburban,Night,Rainy,Dry,Bicycle,'Minor Injury',Yes,4
+A115,Suburban,Night,Foggy,Icy,Bus,'Severe Injury',No,4
+A116,Suburban,Evening,Rainy,Icy,Bicycle,'Minor Injury',No,2
+A117,Urban,Morning,Clear,Dry,Motorcycle,Fatal,Yes,1
+A118,Rural,Afternoon,Rainy,Dry,Car,'Severe Injury',Yes,5
+A119,Urban,Morning,Snowy,Dry,Truck,'No Injury',No,5
+A120,Suburban,Morning,Foggy,Wet,Car,Fatal,No,2
+A121,Rural,Morning,Snowy,Wet,Bicycle,'Minor Injury',No,1
+A122,Rural,Night,Rainy,Wet,Car,Fatal,Yes,3
+A123,Suburban,Evening,Foggy,Dry,Motorcycle,'Minor Injury',Yes,2
+A124,Suburban,Night,Foggy,Icy,Car,'Minor Injury',Yes,4
+A125,Rural,Afternoon,Foggy,Icy,Truck,'Minor Injury',Yes,5
+A126,Suburban,Evening,Snowy,Wet,Truck,'Severe Injury',Yes,5
+A127,Rural,Morning,Snowy,Icy,Bicycle,'Minor Injury',Yes,3
+A128,Urban,Morning,Rainy,Dry,Car,'No Injury',Yes,5
+A129,Rural,Morning,Clear,Wet,Motorcycle,'Severe Injury',No,2
+A130,Urban,Morning,Rainy,Icy,Car,'Severe Injury',Yes,1
+A131,Rural,Afternoon,Foggy,Icy,Motorcycle,'No Injury',No,2
+A132,Urban,Evening,Foggy,Wet,Car,'No Injury',Yes,5
+A133,Urban,Afternoon,Foggy,Dry,Car,Fatal,No,1
+A134,Urban,Evening,Foggy,Dry,Motorcycle,'Severe Injury',No,5
+A135,Rural,Night,Clear,Wet,Car,'Severe Injury',No,5
+A136,Rural,Evening,Rainy,Icy,Truck,'Severe Injury',No,2
+A137,Rural,Evening,Snowy,Dry,Motorcycle,Fatal,No,1
+A138,Rural,Morning,Snowy,Wet,Car,'Minor Injury',No,4
+A139,Urban,Afternoon,Foggy,Icy,Bus,'Minor Injury',No,2
+A140,Urban,Night,Snowy,Wet,Motorcycle,Fatal,Yes,5
+A141,Suburban,Night,Snowy,Icy,Truck,Fatal,Yes,2
+A142,Urban,Night,Rainy,Icy,Truck,'Minor Injury',Yes,3
+A143,Suburban,Afternoon,Snowy,Wet,Bus,'Severe Injury',No,4
+A144,Urban,Afternoon,Clear,Icy,Truck,'Minor Injury',No,2
+A145,Urban,Morning,Foggy,Icy,Motorcycle,Fatal,No,1
+A146,Suburban,Night,Snowy,Icy,Motorcycle,'Minor Injury',Yes,4
+A147,Rural,Night,Foggy,Wet,Motorcycle,'No Injury',Yes,5
+A148,Suburban,Afternoon,Snowy,Wet,Motorcycle,'Minor Injury',No,1
+A149,Urban,Afternoon,Snowy,Icy,Car,Fatal,Yes,2
+A150,Suburban,Night,Snowy,Icy,Bicycle,'Minor Injury',Yes,1
+A151,Rural,Afternoon,Clear,Wet,Bicycle,'Minor Injury',No,5
+A152,Urban,Morning,Snowy,Wet,Bicycle,Fatal,Yes,3
+A153,Suburban,Night,Foggy,Wet,Truck,'No Injury',No,3
+A154,Urban,Evening,Snowy,Dry,Motorcycle,'Severe Injury',No,5
+A155,Urban,Morning,Clear,Wet,Bus,Fatal,No,5
+A156,Rural,Morning,Clear,Icy,Bicycle,'Minor Injury',Yes,1
+A157,Rural,Morning,Rainy,Dry,Truck,'Minor Injury',Yes,1
+A158,Rural,Morning,Clear,Wet,Bicycle,'Minor Injury',No,2
+A159,Suburban,Morning,Clear,Dry,Car,'No Injury',No,2
+A160,Suburban,Morning,Foggy,Wet,Bicycle,'No Injury',No,2
+A161,Rural,Evening,Foggy,Icy,Motorcycle,Fatal,Yes,3
+A162,Suburban,Afternoon,Clear,Icy,Car,'Minor Injury',No,3
+A163,Rural,Evening,Foggy,Icy,Truck,Fatal,No,2
+A164,Urban,Morning,Foggy,Icy,Bus,Fatal,Yes,4
+A165,Urban,Morning,Foggy,Icy,Truck,'Severe Injury',Yes,2
+A166,Urban,Afternoon,Foggy,Dry,Car,'No Injury',No,4
+A167,Rural,Morning,Snowy,Wet,Motorcycle,'Minor Injury',Yes,4
+A168,Urban,Evening,Foggy,Dry,Truck,'Minor Injury',No,1
+A169,Urban,Night,Rainy,Dry,Truck,'No Injury',No,3
+A170,Rural,Morning,Clear,Icy,Bicycle,'Severe Injury',Yes,5
+A171,Rural,Night,Snowy,Dry,Motorcycle,Fatal,No,3
+A172,Urban,Afternoon,Clear,Icy,Motorcycle,'Minor Injury',Yes,2
+A173,Suburban,Afternoon,Clear,Icy,Car,'No Injury',Yes,5
+A174,Urban,Evening,Clear,Dry,Motorcycle,Fatal,Yes,1
+A175,Urban,Morning,Foggy,Wet,Bicycle,Fatal,Yes,3
+A176,Urban,Night,Snowy,Icy,Truck,Fatal,Yes,5
+A177,Suburban,Afternoon,Clear,Icy,Truck,'No Injury',Yes,2
+A178,Rural,Morning,Foggy,Icy,Bus,Fatal,Yes,5
+A179,Urban,Afternoon,Clear,Dry,Motorcycle,'No Injury',Yes,3
+A180,Suburban,Afternoon,Snowy,Dry,Bicycle,Fatal,No,4
+A181,Rural,Night,Rainy,Icy,Motorcycle,'Minor Injury',No,1
+A182,Rural,Night,Rainy,Wet,Motorcycle,'No Injury',No,4
+A183,Suburban,Evening,Rainy,Wet,Bicycle,Fatal,Yes,2
+A184,Rural,Evening,Snowy,Dry,Bicycle,'No Injury',No,5
+A185,Suburban,Morning,Rainy,Dry,Bicycle,'Severe Injury',Yes,1
+A186,Rural,Evening,Rainy,Wet,Car,'No Injury',Yes,3
+A187,Suburban,Night,Clear,Dry,Car,'No Injury',Yes,4
+A188,Suburban,Night,Foggy,Icy,Bus,'No Injury',Yes,2
+A189,Rural,Evening,Rainy,Wet,Bus,'Severe Injury',Yes,4
+A190,Suburban,Morning,Rainy,Wet,Bus,Fatal,No,1
+A191,Rural,Evening,Clear,Dry,Car,'Minor Injury',Yes,4
+A192,Rural,Morning,Rainy,Wet,Motorcycle,Fatal,Yes,4
+A193,Urban,Afternoon,Clear,Wet,Truck,Fatal,Yes,3
+A194,Rural,Evening,Foggy,Icy,Bicycle,'Severe Injury',Yes,2
+A195,Rural,Morning,Snowy,Wet,Motorcycle,'No Injury',No,3
+A196,Urban,Night,Rainy,Wet,Bus,Fatal,No,3
+A197,Urban,Evening,Snowy,Icy,Bus,'Severe Injury',No,4
+A198,Rural,Afternoon,Snowy,Dry,Bicycle,Fatal,No,5
+A199,Urban,Morning,Clear,Dry,Truck,'Minor Injury',Yes,1
+A200,Urban,Evening,Clear,Wet,Car,Fatal,No,2
+A201,Suburban,Evening,Snowy,Icy,Car,'Minor Injury',Yes,1
+A202,Suburban,Evening,Rainy,Dry,Car,'Minor Injury',Yes,4
+A203,Suburban,Morning,Foggy,Dry,Bus,'Severe Injury',No,1
+A204,Urban,Night,Rainy,Icy,Car,Fatal,No,4
+A205,Suburban,Morning,Snowy,Icy,Bus,'Minor Injury',Yes,4
+A206,Rural,Evening,Foggy,Icy,Motorcycle,'Minor Injury',No,5
+A207,Rural,Afternoon,Snowy,Dry,Car,'No Injury',Yes,2
+A208,Urban,Evening,Foggy,Icy,Motorcycle,Fatal,Yes,1
+A209,Rural,Night,Snowy,Dry,Bus,'Minor Injury',No,2
+A210,Suburban,Morning,Rainy,Dry,Motorcycle,'Severe Injury',No,3
+A211,Urban,Evening,Foggy,Dry,Motorcycle,Fatal,No,2
+A212,Suburban,Evening,Foggy,Wet,Motorcycle,'No Injury',Yes,2
+A213,Urban,Afternoon,Clear,Wet,Truck,Fatal,No,4
+A214,Rural,Afternoon,Foggy,Wet,Bus,'Minor Injury',Yes,1
+A215,Rural,Afternoon,Clear,Dry,Truck,Fatal,Yes,1
+A216,Suburban,Night,Rainy,Icy,Motorcycle,'Minor Injury',No,1
+A217,Urban,Night,Rainy,Dry,Bicycle,'Severe Injury',Yes,2
+A218,Rural,Afternoon,Foggy,Wet,Motorcycle,Fatal,No,2
+A219,Urban,Afternoon,Rainy,Dry,Bus,'Severe Injury',Yes,1
+A220,Suburban,Night,Snowy,Dry,Motorcycle,'Severe Injury',No,3
+A221,Urban,Evening,Clear,Wet,Bus,Fatal,No,4
+A222,Rural,Afternoon,Rainy,Dry,Bicycle,'Severe Injury',Yes,1
+A223,Suburban,Morning,Clear,Dry,Car,'No Injury',Yes,3
+A224,Suburban,Night,Snowy,Wet,Bus,'No Injury',No,4
+A225,Suburban,Morning,Clear,Wet,Bus,Fatal,No,5
+A226,Rural,Evening,Foggy,Dry,Motorcycle,'Severe Injury',No,3
+A227,Rural,Evening,Snowy,Wet,Truck,'Minor Injury',Yes,3
+A228,Urban,Night,Snowy,Icy,Motorcycle,'Severe Injury',No,1
+A229,Urban,Evening,Rainy,Dry,Bicycle,Fatal,Yes,3
+A230,Rural,Morning,Clear,Wet,Truck,Fatal,No,1
+A231,Urban,Afternoon,Snowy,Icy,Car,'Minor Injury',Yes,1
+A232,Rural,Afternoon,Snowy,Icy,Motorcycle,'Severe Injury',No,4
+A233,Urban,Evening,Rainy,Wet,Bicycle,'No Injury',Yes,1
+A234,Suburban,Afternoon,Clear,Wet,Truck,'Minor Injury',Yes,4
+A235,Rural,Afternoon,Snowy,Dry,Truck,Fatal,No,2
+A236,Suburban,Afternoon,Snowy,Icy,Motorcycle,Fatal,Yes,5
+A237,Suburban,Afternoon,Foggy,Dry,Bicycle,'Minor Injury',No,5
+A238,Rural,Afternoon,Foggy,Dry,Bus,Fatal,No,2
+A239,Urban,Evening,Snowy,Wet,Motorcycle,Fatal,Yes,4
+A240,Suburban,Afternoon,Snowy,Icy,Bicycle,'Minor Injury',Yes,3
+A241,Suburban,Evening,Rainy,Dry,Car,'No Injury',No,5
+A242,Urban,Afternoon,Rainy,Dry,Bus,Fatal,No,3
+A243,Urban,Afternoon,Rainy,Icy,Motorcycle,Fatal,Yes,2
+A244,Rural,Morning,Foggy,Wet,Bicycle,'Severe Injury',No,4
+A245,Urban,Morning,Foggy,Icy,Car,'Minor Injury',No,2
+A246,Rural,Night,Rainy,Icy,Bus,'Severe Injury',Yes,5
+A247,Suburban,Night,Snowy,Wet,Motorcycle,'Minor Injury',Yes,3
+A248,Suburban,Evening,Snowy,Dry,Bicycle,Fatal,No,3
+A249,Suburban,Afternoon,Foggy,Dry,Car,'Minor Injury',Yes,2
+A250,Urban,Night,Foggy,Dry,Truck,'Severe Injury',No,4
+A251,Rural,Night,Snowy,Wet,Truck,'No Injury',Yes,4
+A252,Rural,Afternoon,Clear,Dry,Bicycle,'Minor Injury',Yes,1
+A253,Rural,Night,Foggy,Icy,Truck,Fatal,No,5
+A254,Rural,Afternoon,Clear,Wet,Motorcycle,'Severe Injury',No,4
+A255,Rural,Night,Rainy,Icy,Bus,'Severe Injury',Yes,5
+A256,Suburban,Night,Clear,Wet,Bus,'Severe Injury',No,5
+A257,Suburban,Night,Rainy,Dry,Truck,'Minor Injury',No,2
+A258,Urban,Evening,Clear,Wet,Car,'No Injury',No,1
+A259,Rural,Afternoon,Rainy,Wet,Car,'Severe Injury',Yes,2
+A260,Suburban,Afternoon,Snowy,Dry,Car,'Minor Injury',Yes,4
+A261,Suburban,Evening,Snowy,Wet,Car,'No Injury',Yes,5
+A262,Suburban,Morning,Clear,Wet,Truck,'Minor Injury',Yes,1
+A263,Urban,Morning,Foggy,Icy,Truck,'No Injury',Yes,2
+A264,Rural,Night,Rainy,Wet,Motorcycle,Fatal,No,4
+A265,Suburban,Night,Clear,Dry,Car,Fatal,Yes,3
+A266,Urban,Evening,Foggy,Wet,Car,Fatal,Yes,5
+A267,Rural,Night,Snowy,Dry,Motorcycle,'Minor Injury',No,2
+A268,Rural,Morning,Rainy,Icy,Truck,'Minor Injury',No,3
+A269,Rural,Morning,Clear,Wet,Bus,'Severe Injury',Yes,5
+A270,Urban,Afternoon,Rainy,Icy,Truck,'Minor Injury',No,4
+A271,Rural,Afternoon,Clear,Wet,Bicycle,'Minor Injury',Yes,1
+A272,Urban,Morning,Snowy,Wet,Bicycle,Fatal,Yes,5
+A273,Urban,Afternoon,Clear,Dry,Truck,'Minor Injury',Yes,2
+A274,Rural,Night,Snowy,Wet,Motorcycle,'No Injury',No,1
+A275,Urban,Afternoon,Snowy,Icy,Bicycle,'Severe Injury',Yes,4
+A276,Rural,Evening,Foggy,Dry,Bicycle,'Minor Injury',No,1
+A277,Urban,Afternoon,Rainy,Icy,Truck,'Severe Injury',No,4
+A278,Urban,Evening,Rainy,Icy,Motorcycle,Fatal,Yes,5
+A279,Urban,Night,Foggy,Icy,Bus,'Minor Injury',No,3
+A280,Rural,Afternoon,Rainy,Icy,Truck,Fatal,No,2
+A281,Suburban,Afternoon,Clear,Icy,Bus,'Severe Injury',Yes,4
+A282,Suburban,Morning,Foggy,Wet,Bus,'No Injury',Yes,3
+A283,Suburban,Afternoon,Foggy,Dry,Bicycle,'No Injury',Yes,4
+A284,Rural,Evening,Rainy,Icy,Car,'No Injury',Yes,2
+A285,Rural,Night,Snowy,Wet,Truck,'Severe Injury',No,4
+A286,Urban,Morning,Foggy,Dry,Car,'No Injury',No,4
+A287,Suburban,Evening,Clear,Wet,Truck,'Severe Injury',Yes,1
+A288,Suburban,Afternoon,Rainy,Wet,Truck,'Severe Injury',No,2
+A289,Urban,Night,Rainy,Wet,Bicycle,Fatal,No,4
+A290,Suburban,Night,Clear,Icy,Truck,Fatal,No,2
+A291,Urban,Evening,Clear,Dry,Bus,'Minor Injury',Yes,4
+A292,Suburban,Evening,Rainy,Icy,Motorcycle,'Severe Injury',Yes,5
+A293,Rural,Night,Rainy,Icy,Motorcycle,'Minor Injury',No,4
+A294,Rural,Morning,Foggy,Wet,Bicycle,Fatal,Yes,4
+A295,Urban,Afternoon,Rainy,Icy,Motorcycle,'Severe Injury',No,2
+A296,Urban,Evening,Rainy,Wet,Bus,Fatal,Yes,2
+A297,Suburban,Evening,Rainy,Dry,Bus,'Minor Injury',No,3
+A298,Rural,Evening,Clear,Dry,Car,Fatal,Yes,4
+A299,Urban,Morning,Clear,Wet,Bus,'Severe Injury',Yes,2
+A300,Rural,Evening,Foggy,Wet,Truck,'Severe Injury',No,1
+A301,Rural,Night,Clear,Icy,Bus,'Minor Injury',No,1
+A302,Urban,Night,Foggy,Wet,Car,'Minor Injury',Yes,1
+A303,Urban,Night,Rainy,Wet,Truck,'Severe Injury',Yes,5
+A304,Rural,Night,Foggy,Dry,Bus,Fatal,Yes,4
+A305,Rural,Evening,Snowy,Icy,Bus,'No Injury',Yes,3
+A306,Urban,Afternoon,Rainy,Icy,Bus,Fatal,No,4
+A307,Rural,Evening,Foggy,Icy,Bicycle,'Severe Injury',Yes,2
+A308,Rural,Evening,Snowy,Icy,Car,Fatal,No,4
+A309,Rural,Night,Snowy,Icy,Car,'Severe Injury',No,3
+A310,Urban,Evening,Clear,Dry,Bus,'Severe Injury',Yes,4
+A311,Rural,Morning,Snowy,Dry,Truck,'No Injury',Yes,2
+A312,Suburban,Evening,Snowy,Dry,Bus,'Severe Injury',No,5
+A313,Urban,Afternoon,Foggy,Icy,Bicycle,'Minor Injury',No,2
+A314,Urban,Morning,Foggy,Wet,Bicycle,Fatal,Yes,2
+A315,Rural,Morning,Snowy,Dry,Bicycle,'Minor Injury',Yes,3
+A316,Suburban,Afternoon,Snowy,Dry,Bus,'No Injury',Yes,5
+A317,Suburban,Morning,Rainy,Wet,Truck,'No Injury',Yes,2
+A318,Urban,Evening,Foggy,Dry,Car,'Severe Injury',No,3
+A319,Urban,Afternoon,Snowy,Dry,Car,'Minor Injury',Yes,1
+A320,Suburban,Evening,Snowy,Icy,Motorcycle,'No Injury',No,1
+A321,Rural,Afternoon,Foggy,Wet,Truck,Fatal,No,4
+A322,Urban,Evening,Rainy,Wet,Motorcycle,'No Injury',No,1
+A323,Urban,Night,Rainy,Wet,Bus,'Minor Injury',Yes,5
+A324,Rural,Afternoon,Snowy,Icy,Bicycle,'No Injury',Yes,5
+A325,Rural,Morning,Snowy,Icy,Bicycle,'Severe Injury',No,2
+A326,Rural,Afternoon,Clear,Icy,Truck,'Severe Injury',No,1
+A327,Rural,Evening,Rainy,Wet,Bus,'Severe Injury',Yes,2
+A328,Urban,Night,Clear,Icy,Bicycle,Fatal,Yes,4
+A329,Urban,Night,Clear,Dry,Car,'Minor Injury',Yes,2
+A330,Urban,Afternoon,Snowy,Wet,Bicycle,'Severe Injury',No,2
+A331,Urban,Afternoon,Clear,Wet,Truck,'Severe Injury',Yes,5
+A332,Rural,Night,Rainy,Wet,Motorcycle,'Severe Injury',No,3
+A333,Rural,Evening,Rainy,Dry,Car,Fatal,No,2
+A334,Urban,Afternoon,Rainy,Dry,Truck,'Minor Injury',Yes,5
+A335,Urban,Evening,Snowy,Wet,Truck,'Severe Injury',Yes,3
+A336,Urban,Evening,Snowy,Wet,Bus,'No Injury',Yes,5
+A337,Suburban,Morning,Snowy,Icy,Truck,'No Injury',Yes,3
+A338,Urban,Afternoon,Clear,Icy,Bus,'Minor Injury',Yes,3
+A339,Rural,Afternoon,Snowy,Dry,Motorcycle,'No Injury',No,2
+A340,Suburban,Morning,Foggy,Icy,Motorcycle,'Severe Injury',No,3
+A341,Suburban,Morning,Snowy,Icy,Motorcycle,'Severe Injury',Yes,1
+A342,Rural,Morning,Clear,Wet,Motorcycle,'No Injury',Yes,2
+A343,Rural,Morning,Rainy,Icy,Bus,'No Injury',No,5
+A344,Urban,Morning,Rainy,Icy,Car,'No Injury',Yes,1
+A345,Rural,Night,Foggy,Dry,Bicycle,'Severe Injury',Yes,1
+A346,Rural,Morning,Clear,Dry,Bicycle,Fatal,No,3
+A347,Rural,Night,Snowy,Icy,Truck,'Minor Injury',Yes,3
+A348,Rural,Night,Clear,Icy,Motorcycle,'No Injury',No,1
+A349,Rural,Evening,Foggy,Wet,Truck,Fatal,No,3
+A350,Rural,Evening,Rainy,Icy,Bicycle,'Severe Injury',No,1
+A351,Rural,Afternoon,Snowy,Icy,Motorcycle,Fatal,Yes,1
+A352,Suburban,Night,Foggy,Wet,Truck,'Severe Injury',No,5
+A353,Suburban,Evening,Foggy,Icy,Car,'Minor Injury',Yes,5
+A354,Suburban,Morning,Snowy,Icy,Bus,Fatal,Yes,4
+A355,Urban,Morning,Clear,Dry,Motorcycle,'Minor Injury',No,2
+A356,Rural,Afternoon,Snowy,Wet,Bus,'No Injury',No,5
+A357,Suburban,Night,Rainy,Dry,Motorcycle,'Severe Injury',No,3
+A358,Rural,Afternoon,Rainy,Dry,Truck,'Severe Injury',No,3
+A359,Suburban,Afternoon,Rainy,Dry,Truck,'No Injury',Yes,2
+A360,Urban,Evening,Clear,Wet,Motorcycle,'Minor Injury',No,5
+A361,Rural,Morning,Clear,Wet,Bus,'No Injury',Yes,1
+A362,Urban,Evening,Rainy,Wet,Bus,'Severe Injury',Yes,3
+A363,Suburban,Evening,Foggy,Dry,Car,Fatal,Yes,5
+A364,Urban,Afternoon,Rainy,Wet,Motorcycle,'Minor Injury',No,5
+A365,Urban,Morning,Foggy,Dry,Motorcycle,'No Injury',Yes,4
+A366,Suburban,Evening,Foggy,Dry,Bicycle,'Minor Injury',No,1
+A367,Suburban,Evening,Clear,Dry,Motorcycle,Fatal,Yes,3
+A368,Rural,Evening,Foggy,Icy,Car,'No Injury',Yes,2
+A369,Suburban,Evening,Clear,Icy,Truck,Fatal,Yes,1
+A370,Suburban,Afternoon,Snowy,Dry,Car,Fatal,Yes,4
+A371,Rural,Afternoon,Clear,Icy,Bicycle,'Severe Injury',Yes,2
+A372,Suburban,Afternoon,Clear,Icy,Bus,Fatal,No,5
+A373,Rural,Afternoon,Snowy,Icy,Bus,'Severe Injury',No,5
+A374,Suburban,Afternoon,Rainy,Wet,Bus,'No Injury',Yes,3
+A375,Suburban,Evening,Snowy,Wet,Bus,'No Injury',No,2
+A376,Urban,Evening,Foggy,Wet,Car,'Severe Injury',Yes,2
+A377,Urban,Afternoon,Foggy,Wet,Car,'Severe Injury',No,4
+A378,Rural,Afternoon,Snowy,Wet,Truck,'Minor Injury',No,3
+A379,Suburban,Afternoon,Clear,Dry,Bicycle,'Severe Injury',No,2
+A380,Suburban,Evening,Clear,Wet,Truck,'Severe Injury',No,2
+A381,Suburban,Night,Rainy,Dry,Truck,'Severe Injury',Yes,1
+A382,Rural,Night,Foggy,Icy,Bicycle,'Severe Injury',Yes,1
+A383,Suburban,Evening,Clear,Wet,Truck,Fatal,No,2
+A384,Suburban,Night,Snowy,Icy,Bicycle,'Severe Injury',Yes,4
+A385,Urban,Afternoon,Foggy,Icy,Bus,'Minor Injury',No,1
+A386,Suburban,Night,Snowy,Wet,Bicycle,'Minor Injury',Yes,1
+A387,Suburban,Night,Rainy,Dry,Car,'Severe Injury',No,2
+A388,Rural,Afternoon,Foggy,Icy,Truck,'No Injury',Yes,5
+A389,Rural,Afternoon,Clear,Wet,Car,Fatal,No,2
+A390,Rural,Night,Foggy,Wet,Bicycle,'No Injury',Yes,5
+A391,Rural,Morning,Foggy,Icy,Motorcycle,'Minor Injury',Yes,3
+A392,Suburban,Morning,Foggy,Wet,Motorcycle,'Minor Injury',No,4
+A393,Urban,Evening,Foggy,Icy,Bus,'Minor Injury',Yes,1
+A394,Rural,Night,Foggy,Wet,Motorcycle,'No Injury',No,5
+A395,Urban,Night,Snowy,Icy,Bus,'Minor Injury',No,5
+A396,Rural,Night,Clear,Icy,Bus,'No Injury',No,1
+A397,Suburban,Afternoon,Foggy,Icy,Truck,'Severe Injury',No,4
+A398,Urban,Morning,Clear,Dry,Motorcycle,Fatal,Yes,5
+A399,Rural,Evening,Rainy,Dry,Bus,'Severe Injury',No,4
+A400,Rural,Morning,Clear,Dry,Car,'No Injury',No,2
+A401,Rural,Evening,Rainy,Wet,Truck,'Minor Injury',Yes,1
+A402,Urban,Afternoon,Clear,Dry,Motorcycle,'Minor Injury',Yes,1
+A403,Rural,Evening,Clear,Wet,Bicycle,'No Injury',No,1
+A404,Suburban,Morning,Foggy,Dry,Car,'Minor Injury',Yes,3
+A405,Rural,Morning,Clear,Dry,Bicycle,Fatal,Yes,4
+A406,Urban,Night,Clear,Dry,Motorcycle,'Minor Injury',No,5
+A407,Rural,Morning,Foggy,Dry,Bus,'No Injury',No,2
+A408,Urban,Evening,Clear,Icy,Car,Fatal,Yes,1
+A409,Suburban,Afternoon,Foggy,Dry,Bus,'Severe Injury',Yes,1
+A410,Urban,Night,Rainy,Dry,Truck,'No Injury',Yes,2
+A411,Rural,Afternoon,Foggy,Dry,Motorcycle,Fatal,No,3
+A412,Rural,Evening,Snowy,Dry,Motorcycle,'Severe Injury',Yes,3
+A413,Rural,Afternoon,Rainy,Wet,Truck,'Severe Injury',No,2
+A414,Suburban,Evening,Snowy,Icy,Motorcycle,'Minor Injury',No,3
+A415,Suburban,Afternoon,Clear,Icy,Truck,'No Injury',No,1
+A416,Suburban,Night,Snowy,Dry,Motorcycle,'Minor Injury',No,3
+A417,Suburban,Morning,Clear,Icy,Truck,Fatal,No,1
+A418,Urban,Evening,Clear,Dry,Bicycle,'Severe Injury',No,1
+A419,Urban,Night,Clear,Wet,Bicycle,'Severe Injury',Yes,2
+A420,Suburban,Afternoon,Clear,Dry,Motorcycle,'Minor Injury',Yes,4
+A421,Suburban,Night,Clear,Icy,Truck,Fatal,No,4
+A422,Urban,Morning,Snowy,Dry,Car,Fatal,Yes,5
+A423,Suburban,Night,Snowy,Wet,Truck,'No Injury',Yes,5
+A424,Suburban,Evening,Foggy,Wet,Motorcycle,Fatal,Yes,5
+A425,Urban,Morning,Rainy,Dry,Car,'Severe Injury',No,3
+A426,Suburban,Morning,Clear,Wet,Bicycle,Fatal,Yes,3
+A427,Urban,Evening,Foggy,Dry,Bus,'No Injury',Yes,3
+A428,Suburban,Morning,Foggy,Icy,Bicycle,'Minor Injury',Yes,5
+A429,Urban,Evening,Foggy,Dry,Car,'No Injury',Yes,4
+A430,Urban,Morning,Snowy,Icy,Car,'No Injury',Yes,1
+A431,Urban,Morning,Rainy,Icy,Bus,'No Injury',No,3
+A432,Rural,Night,Snowy,Icy,Bus,'Severe Injury',Yes,1
+A433,Rural,Morning,Foggy,Wet,Bus,Fatal,Yes,5
+A434,Rural,Evening,Rainy,Wet,Bicycle,Fatal,Yes,5
+A435,Rural,Afternoon,Clear,Wet,Bus,'Severe Injury',Yes,2
+A436,Suburban,Morning,Snowy,Dry,Car,Fatal,No,5
+A437,Urban,Morning,Foggy,Dry,Car,'Severe Injury',Yes,2
+A438,Urban,Night,Rainy,Wet,Car,'No Injury',No,2
+A439,Urban,Afternoon,Clear,Icy,Bicycle,Fatal,Yes,1
+A440,Urban,Afternoon,Clear,Icy,Truck,'No Injury',No,3
+A441,Suburban,Night,Snowy,Dry,Motorcycle,'Severe Injury',No,4
+A442,Urban,Afternoon,Foggy,Wet,Truck,'Minor Injury',No,1
+A443,Urban,Afternoon,Snowy,Wet,Bus,'Minor Injury',No,2
+A444,Rural,Morning,Snowy,Dry,Motorcycle,Fatal,No,3
+A445,Rural,Afternoon,Rainy,Wet,Bicycle,'No Injury',No,4
+A446,Suburban,Afternoon,Snowy,Dry,Bus,'Severe Injury',Yes,2
+A447,Rural,Afternoon,Clear,Icy,Car,'No Injury',No,4
+A448,Rural,Morning,Rainy,Dry,Truck,'No Injury',Yes,4
+A449,Rural,Night,Snowy,Icy,Car,'No Injury',No,1
+A450,Rural,Night,Snowy,Dry,Bicycle,'Severe Injury',No,4
+A451,Suburban,Morning,Rainy,Icy,Car,Fatal,Yes,5
+A452,Suburban,Afternoon,Rainy,Wet,Car,'Minor Injury',Yes,3
+A453,Rural,Morning,Foggy,Wet,Motorcycle,'Severe Injury',No,3
+A454,Urban,Morning,Rainy,Icy,Motorcycle,Fatal,Yes,5
+A455,Rural,Morning,Clear,Icy,Car,'No Injury',No,4
+A456,Urban,Afternoon,Foggy,Icy,Truck,'Minor Injury',No,1
+A457,Rural,Afternoon,Clear,Wet,Car,'Severe Injury',Yes,4
+A458,Suburban,Morning,Foggy,Wet,Bicycle,'No Injury',No,4
+A459,Urban,Night,Clear,Dry,Motorcycle,'No Injury',No,1
+A460,Rural,Evening,Clear,Dry,Bus,'Minor Injury',Yes,2
+A461,Urban,Evening,Rainy,Icy,Bicycle,'Severe Injury',No,4
+A462,Urban,Evening,Snowy,Wet,Truck,Fatal,Yes,3
+A463,Rural,Evening,Rainy,Dry,Bicycle,'Minor Injury',Yes,1
+A464,Suburban,Evening,Clear,Dry,Motorcycle,'Minor Injury',Yes,1
+A465,Suburban,Night,Clear,Dry,Motorcycle,Fatal,No,1
+A466,Urban,Night,Foggy,Wet,Truck,'Severe Injury',No,5
+A467,Suburban,Afternoon,Clear,Dry,Motorcycle,'No Injury',No,2
+A468,Rural,Evening,Snowy,Wet,Bicycle,Fatal,Yes,5
+A469,Rural,Evening,Clear,Wet,Truck,Fatal,Yes,5
+A470,Rural,Night,Rainy,Icy,Car,'Minor Injury',Yes,4
+A471,Rural,Evening,Clear,Icy,Bicycle,'Minor Injury',Yes,2
+A472,Suburban,Night,Clear,Icy,Bus,Fatal,No,5
+A473,Urban,Evening,Foggy,Wet,Car,Fatal,Yes,4
+A474,Urban,Night,Foggy,Wet,Bus,'Severe Injury',No,1
+A475,Suburban,Evening,Foggy,Icy,Bicycle,Fatal,No,4
+A476,Urban,Afternoon,Rainy,Wet,Motorcycle,'Severe Injury',No,3
+A477,Suburban,Morning,Clear,Icy,Car,'No Injury',Yes,4
+A478,Urban,Morning,Snowy,Wet,Bus,'Minor Injury',No,2
+A479,Rural,Evening,Clear,Wet,Bus,'No Injury',No,3
+A480,Suburban,Afternoon,Rainy,Icy,Truck,'Severe Injury',Yes,3
+A481,Suburban,Evening,Clear,Icy,Bicycle,'Severe Injury',Yes,2
+A482,Rural,Night,Rainy,Icy,Bicycle,Fatal,Yes,2
+A483,Suburban,Afternoon,Clear,Icy,Motorcycle,'No Injury',Yes,2
+A484,Urban,Night,Foggy,Dry,Truck,Fatal,Yes,4
+A485,Suburban,Evening,Foggy,Wet,Motorcycle,'Severe Injury',No,3
+A486,Rural,Evening,Foggy,Dry,Truck,'Minor Injury',Yes,5
+A487,Rural,Afternoon,Snowy,Icy,Car,'Severe Injury',Yes,1
+A488,Urban,Morning,Clear,Wet,Truck,'Minor Injury',No,3
+A489,Suburban,Afternoon,Foggy,Wet,Bus,'No Injury',No,4
+A490,Rural,Afternoon,Clear,Dry,Car,'No Injury',No,4
+A491,Rural,Morning,Snowy,Icy,Bus,'Minor Injury',No,3
+A492,Suburban,Night,Clear,Icy,Truck,Fatal,Yes,1
+A493,Suburban,Night,Snowy,Dry,Bicycle,Fatal,No,3
+A494,Urban,Evening,Clear,Wet,Car,'Minor Injury',No,3
+A495,Rural,Evening,Snowy,Icy,Car,Fatal,Yes,5
+A496,Suburban,Morning,Clear,Dry,Car,'Severe Injury',Yes,5
+A497,Suburban,Morning,Clear,Wet,Bicycle,'Minor Injury',Yes,2
+A498,Urban,Afternoon,Foggy,Icy,Truck,Fatal,Yes,1
+A499,Rural,Evening,Snowy,Dry,Car,Fatal,No,5
+A500,Rural,Morning,Foggy,Wet,Car,Fatal,No,1
